@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>スポーツ手帳</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
@@ -14,6 +14,9 @@
         <div class="content">
             <div class="content__post">
                 <h3>本文</h3>
+                <p>{{ $post->day }}</p>
+                <p>{{ $post->place }}</p>
+                <p>{{ $post->distance }}</p>
                 <p>{{ $post->body }}</p>
                 <p class='update_at'>{{ $post->update_at}}</p>
             </div>
@@ -21,17 +24,10 @@
         <div class="footer">
             <a href="/">戻る</a>
         </div>
-        <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post" style="display:inline">
-            @csrf
-            @method('DELETE')
-            /*<input type="submit" style="display:none">
-            <p class='delete'>[<span onclick="return deletePost(this);">delete</span>]</p>*/
-            <button type="submit"><span onclick="return deletePost(this);">delete</span></button>
-        </form>
         <script>
-            function deletePost(e){
+            function deletePost(this){
                 'use strict';
-                if(confirm('削除すると復元できません。'\n'本当に削除しますか')){
+                if(confirm('本当に削除しますか')){
                     document.getElementById('form_delete').submit();
                 }
             }

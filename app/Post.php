@@ -14,8 +14,10 @@ class post extends Model
     }
     protected $fillable = [
         'title',
-        'body',
-        'distance',
         'place',
+        'day',
+        'distance',
+        'body',
+        
         ];
 }

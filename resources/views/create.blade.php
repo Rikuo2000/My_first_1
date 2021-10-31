@@ -13,10 +13,10 @@
                 <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
-            <div class="Pday">
+            <div class="day">
                 <h2>練習日</h2>
-                <textarea name="post[Pday]" placeholder="練習した日を入力">{{ old('post.Pday') }}</textarea>
-                <p class="Pday__error" style="color:red">{{ $errors->first('post.Pday') }}</p>
+                <textarea name="post[day]" placeholder="練習した日を入力">{{ old('post.day') }}</textarea>
+                <p class="day__error" style="color:red">{{ $errors->first('post.day') }}</p>
             </div>
             <div class="place">
                 <h2>練習場所</h2>

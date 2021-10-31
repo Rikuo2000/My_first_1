@@ -5,6 +5,7 @@
         <title>スポーツ手帳</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        
     <style>
         .box{
             width:96vw;
@@ -19,8 +20,8 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post box'>
-                    <h2 class='title'><a href="/post/{{ $post->id }}/edit">{{ $post->title }}</a></h2>
-                    <p class='Pday'>{{ $post->Pday }}</p>
+                    <h2 class='title'><a href="/posts/{{ $post->id }}/edit">{{ $post->title }}</a></h2>
+                    <p class='day'>{{ $post->day }}</p>
                     <p class='place'>{{ $post->place }}</p>
                     <p class='distance'>{{ $post->distance }}</p>
                     <p class='body'>{{ $post->body }}</p>
